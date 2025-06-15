@@ -2,19 +2,20 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import Home from './pages/Home';
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <>
-       <div className="container text-center mt-5">
-      <h1 className="text-primary mb-4">🍲 Welcome to Savorly</h1>
-      <p className="lead">Your personal recipe book</p>
-      <button className="btn btn-success mt-3">Get Started</button>
+    <div className="container mt-4">
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
     </div>
-    </>
-  )
+  );
 }
 
 export default App
